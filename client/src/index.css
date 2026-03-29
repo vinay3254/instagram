@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    @apply bg-black;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    @apply min-h-[100dvh] bg-black text-white antialiased;
+  }
+
+  #root {
+    @apply min-h-[100dvh];
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+
+  input,
+  textarea {
+    @apply appearance-none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(115, 115, 115, 0.5);
+    border: 2px solid #000;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-xl border border-border bg-surface;
+  }
+
+  .story-ring {
+    @apply rounded-full bg-gradient-to-tr from-[#feda75] via-[#fa7e1e] via-55% to-[#d62976] p-[2px];
+  }
+
+  .action-button {
+    @apply rounded-full p-2 text-white transition duration-200 hover:opacity-70 active:scale-[0.95];
+  }
+
+  .ig-input {
+    @apply w-full rounded-md border border-[#363636] bg-[#121212] px-3 py-2.5 text-sm text-white outline-none transition focus:border-[#555555] placeholder:text-[#737373];
+  }
+
+  .ig-secondary-button {
+    @apply rounded-lg bg-[#363636] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#474747] disabled:opacity-60;
+  }
+
+  .ig-primary-button {
+    @apply rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accentSoft disabled:opacity-60;
+  }
+}
