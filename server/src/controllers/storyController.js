@@ -1,9 +1,6 @@
 import Story from "../models/Story.js";
+import { storeUploadedFile } from "../utils/mediaStorage.js";
 import { serializeStory } from "../utils/serializers.js";
-
-function buildStoryUrl(req, file) {
-  return `${req.protocol}://${req.get("host")}/uploads/${file.filename}`;
-}
 
 function getStoryExpiration() {
   return new Date(Date.now() + 24 * 60 * 60 * 1000);
@@ -68,10 +65,11 @@ export async function createStory(req, res) {
   }
 
   const mediaType = uploadedFile.mimetype.startsWith("video/") ? "video" : "image";
+  const mediaUrl = await storeUploadedFile(uploadedFile, req);
 
   const story = await Story.create({
     author: req.user._id,
-    mediaUrl: buildStoryUrl(req, uploadedFile),
+    mediaUrl,
     mediaType,
     caption: req.body.caption || "",
     expiresAt: getStoryExpiration(),

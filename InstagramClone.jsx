@@ -604,7 +604,7 @@ function PostCard({
   );
 }
 
-export default function InstagramClone() {
+export default function Curated() {
   const [posts, dispatch] = useReducer(postsReducer, INITIAL_POSTS);
   const [currentPage, setCurrentPage] = useState("feed");
   const [activePanel, setActivePanel] = useState(null);
@@ -806,7 +806,7 @@ export default function InstagramClone() {
   };
 
   const handleShare = async (post) => {
-    const link = `https://instagram.com/p/${post.id}`;
+    const link = `https://curated.app/p/${post.id}`;
     try {
       if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(link);
@@ -869,7 +869,7 @@ export default function InstagramClone() {
         name: CURRENT_USER.name,
         avatar: CURRENT_USER.avatar,
       },
-      location: "Shared from Instagram Web",
+      location: "Shared from Curated Web",
       image: createImage.preview,
       caption: createCaption.trim() || "Freshly shared from the workspace.",
       likes: 0,
@@ -1066,7 +1066,7 @@ export default function InstagramClone() {
             <p className="text-xs leading-6 text-white/25">
               About · Help · Press · API · Jobs · Privacy · Terms · Locations · Language
               <br />
-              <span className="mt-3 inline-block">© 2026 Instagram from Meta</span>
+              <span className="mt-3 inline-block">© 2026 Curated</span>
             </p>
           </div>
         </aside>
@@ -1510,7 +1510,7 @@ export default function InstagramClone() {
               </div>
               <div className="hidden xl:block">
                 <p className="[font-family:Georgia,serif] text-[31px] tracking-tight text-white">
-                  Instagram
+                  Curated
                 </p>
               </div>
             </div>
@@ -1547,7 +1547,7 @@ export default function InstagramClone() {
 
         <div className="relative flex min-h-[100dvh] flex-1 flex-col">
           <header className="sticky top-0 z-20 flex items-center justify-between border-b border-white/10 bg-black/95 px-4 py-4 backdrop-blur md:hidden">
-            <p className="[font-family:Georgia,serif] text-[30px] tracking-tight text-white">Instagram</p>
+            <p className="[font-family:Georgia,serif] text-[30px] tracking-tight text-white">Curated</p>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => togglePanel("notifications")}

@@ -212,7 +212,7 @@ export default function MessagesPage() {
                       <img src={user.avatar} alt={user.username} className="h-10 w-10 rounded-full object-cover" />
                       <div className="min-w-0">
                         <p className="truncate text-sm font-semibold text-white">{user.username}</p>
-                        <p className="truncate text-xs text-[#a8a8a8]">{user.bio || "Instagram user"}</p>
+                        <p className="truncate text-xs text-[#a8a8a8]">{user.bio || "Curated user"}</p>
                       </div>
                     </button>
                   ))}

@@ -69,7 +69,7 @@ export default function SearchPage() {
                     <img src={user.avatar} alt={user.username} className="h-12 w-12 rounded-full object-cover" />
                     <div className="min-w-0">
                       <p className="truncate text-sm font-semibold text-white">{user.username}</p>
-                      <p className="truncate text-sm text-[#a8a8a8]">{user.bio || "Instagram user"}</p>
+                      <p className="truncate text-sm text-[#a8a8a8]">{user.bio || "Curated user"}</p>
                     </div>
                     {user.isFollowing ? (
                       <span className="ml-auto rounded-full bg-black px-3 py-1 text-xs font-semibold text-[#a8a8a8]">

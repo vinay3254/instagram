@@ -1,6 +1,6 @@
-# Instagram Clone
+# Curated
 
-A full-stack Instagram clone built with:
+A full-stack social media application built with:
 
 - React + Vite
 - Tailwind CSS
@@ -19,7 +19,6 @@ A full-stack Instagram clone built with:
 │   └── package.json
 ├── server
 │   ├── src
-│   ├── uploads
 │   └── package.json
 ├── .env.example
 └── package.json
@@ -37,7 +36,7 @@ A full-stack Instagram clone built with:
 - Create post modal with image upload
 - Post detail view with live comments
 - Local saved-post toggle in the client UI
-- Responsive dark Instagram-style layout
+- Responsive dark Curated-style layout
 
 ## Environment setup
 
@@ -50,7 +49,7 @@ cp .env.example .env
 Required root variables:
 
 ```env
-MONGO_URI=mongodb://127.0.0.1:27017/instagram_clone
+MONGO_URI=mongodb://127.0.0.1:27017/curated
 JWT_SECRET=replace-with-a-strong-secret
 JWT_REFRESH_SECRET=replace-with-a-second-strong-secret
 PORT=5000

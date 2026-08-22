@@ -1,6 +1,7 @@
 import Comment from "../models/Comment.js";
 import Post from "../models/Post.js";
 import { createNotification } from "../utils/notificationService.js";
+import { storeUploadedFile } from "../utils/mediaStorage.js";
 import { serializeComment, serializePost } from "../utils/serializers.js";
 
 function buildPagination(page, limit, total) {
@@ -101,7 +102,7 @@ export async function createPost(req, res) {
     return res.status(400).json({ message: "An image or video upload is required." });
   }
 
-  const mediaUrl = `${req.protocol}://${req.get("host")}/uploads/${uploadedFile.filename}`;
+  const mediaUrl = await storeUploadedFile(uploadedFile, req);
   const mediaType = uploadedFile.mimetype.startsWith("video/") ? "video" : "image";
   const post = await Post.create({
     author: req.user._id,

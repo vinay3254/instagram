@@ -7,3 +7,5 @@ server/uploads/*
 !server/uploads/.gitkeep
 server/server/uploads/*
 !server/server/uploads/.gitkeep
+
+.vercel

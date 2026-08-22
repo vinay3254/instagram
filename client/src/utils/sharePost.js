@@ -37,7 +37,7 @@ async function copyText(text) {
 
 export async function sharePost(post) {
   const url = `${window.location.origin}/p/${post.id}`;
-  const title = post.author?.username ? `${post.author.username} on Instagram Clone` : "Instagram Clone post";
+  const title = post.author?.username ? `${post.author.username} on Curated` : "Curated post";
   const text = post.caption || "Check out this post.";
 
   if (navigator.share) {

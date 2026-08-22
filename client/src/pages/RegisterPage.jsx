@@ -37,7 +37,7 @@ export default function RegisterPage() {
           <div className="absolute left-10 top-1/2 h-[560px] w-[270px] -translate-y-1/2 rounded-[36px] border border-border bg-gradient-to-b from-[#1a1a1a] via-[#101010] to-black p-3 shadow-lifted">
             <div className="flex h-full flex-col overflow-hidden rounded-[30px] border border-white/10 bg-black">
               <div className="flex items-center justify-between border-b border-border px-5 py-4">
-                <p className="[font-family:'Segoe_Script',cursive] text-[28px] text-white">Instagram</p>
+                <p className="[font-family:'Segoe_Script',cursive] text-[28px] text-white">Curated</p>
                 <div className="rounded-full bg-accent/15 px-3 py-1 text-[11px] font-semibold text-accent">
                   Create
                 </div>
@@ -80,7 +80,7 @@ export default function RegisterPage() {
         <section className="mx-auto w-full max-w-[350px]">
           <div className="border border-border bg-black px-10 py-8">
             <div className="text-center">
-              <p className="[font-family:'Segoe_Script',cursive] text-[48px] text-white">Instagram</p>
+              <p className="[font-family:'Segoe_Script',cursive] text-[48px] text-white">Curated</p>
               <p className="mt-3 text-[17px] font-semibold leading-5 text-[#a8a8a8]">
                 Sign up to see photos and videos from your friends.
               </p>
@@ -115,7 +115,7 @@ export default function RegisterPage() {
               />
 
               <p className="pt-2 text-center text-xs leading-4 text-[#a8a8a8]">
-                People who use our service may have uploaded your contact information to Instagram.
+                People who use our service may have uploaded your contact information to Curated.
               </p>
 
               {error ? <p className="pt-1 text-sm text-[#ff7d91]">{error}</p> : null}

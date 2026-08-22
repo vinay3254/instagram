@@ -234,7 +234,7 @@ export default function FeedPage() {
               About · Help · Press · API · Jobs · Privacy · Terms · Locations · Language
             </p>
             <p className="mt-4 text-xs uppercase tracking-[0.06em] text-[#737373]">
-              © 2026 Instagram from Meta
+              © 2026 Curated
             </p>
           </div>
         </div>

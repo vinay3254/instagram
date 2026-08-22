@@ -32,7 +32,7 @@ export default function LoginPage() {
           <div className="absolute left-10 top-1/2 h-[560px] w-[270px] -translate-y-1/2 rounded-[36px] border border-border bg-gradient-to-b from-[#1a1a1a] via-[#0f0f0f] to-black p-3 shadow-lifted">
             <div className="flex h-full flex-col overflow-hidden rounded-[30px] border border-white/10 bg-black">
               <div className="flex items-center justify-between border-b border-border px-5 py-4">
-                <p className="[font-family:'Segoe_Script',cursive] text-[28px] text-white">Instagram</p>
+                <p className="[font-family:'Segoe_Script',cursive] text-[28px] text-white">Curated</p>
                 <div className="flex gap-1">
                   <span className="h-2 w-2 rounded-full bg-white/40" />
                   <span className="h-2 w-2 rounded-full bg-white/20" />
@@ -82,7 +82,7 @@ export default function LoginPage() {
         <section className="mx-auto w-full max-w-[350px]">
           <div className="border border-border bg-black px-10 py-8">
             <div className="text-center">
-              <p className="[font-family:'Segoe_Script',cursive] text-[48px] text-white">Instagram</p>
+              <p className="[font-family:'Segoe_Script',cursive] text-[48px] text-white">Curated</p>
             </div>
 
             <form onSubmit={handleSubmit} className="mt-8 space-y-2.5">

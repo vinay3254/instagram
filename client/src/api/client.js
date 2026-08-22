@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const STORAGE_KEY = "instagram-auth";
+const STORAGE_KEY = "curated-auth";
+const LEGACY_STORAGE_KEY = "instagram-auth";
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const api = axios.create({
@@ -11,7 +12,7 @@ let refreshPromise = null;
 
 export function getStoredSession() {
   try {
-    const value = window.localStorage.getItem(STORAGE_KEY);
+    const value = window.localStorage.getItem(STORAGE_KEY) || window.localStorage.getItem(LEGACY_STORAGE_KEY);
     return value ? JSON.parse(value) : null;
   } catch (error) {
     return null;

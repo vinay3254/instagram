@@ -23,7 +23,7 @@ export default function AppShell() {
   const { user, logout } = useAuth();
   const [composerOpen, setComposerOpen] = useState(false);
   const [composerTick, setComposerTick] = useState(0);
-  const [savedPostIds, setSavedPostIds] = useLocalStorage("instagram-saved-posts", []);
+  const [savedPostIds, setSavedPostIds] = useLocalStorage("curated-saved-posts", []);
   const [toast, setToast] = useState("");
   const [unreadNotifications, setUnreadNotifications] = useState(0);
   const [unreadMessages, setUnreadMessages] = useState(0);
@@ -129,9 +129,9 @@ export default function AppShell() {
               className="flex h-10 w-full items-center justify-center xl:justify-start"
             >
               <p className="hidden [font-family:'Segoe_Script',cursive] text-[34px] tracking-tight text-white xl:block">
-                Instagram
+                Curated
               </p>
-              <span className="text-xl font-semibold tracking-tight xl:hidden">IG</span>
+              <span className="text-xl font-semibold tracking-tight xl:hidden">C</span>
             </button>
           </div>
 
@@ -194,7 +194,7 @@ export default function AppShell() {
               <img src={user?.avatar} alt={user?.username} className="h-11 w-11 rounded-full object-cover" />
               <div className="min-w-0">
                 <p className="truncate font-semibold text-white">{user?.username}</p>
-                <p className="truncate text-[#a8a8a8]">{user?.bio || "instagram clone"}</p>
+                <p className="truncate text-[#a8a8a8]">{user?.bio || "Curated user"}</p>
               </div>
             </div>
 
@@ -211,7 +211,7 @@ export default function AppShell() {
         <div className="flex min-w-0 flex-1 flex-col">
           <header className="sticky top-0 z-20 flex h-[60px] items-center justify-between border-b border-border bg-black/90 px-4 backdrop-blur lg:hidden">
             <p className="[font-family:'Segoe_Script',cursive] text-[31px] tracking-tight text-white">
-              Instagram
+              Curated
             </p>
             <div className="flex items-center gap-1">
               <NavLink to="/notifications" className="relative rounded-full p-2 text-white">

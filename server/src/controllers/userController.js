@@ -1,6 +1,7 @@
 import Post from "../models/Post.js";
 import User from "../models/User.js";
 import { createNotification } from "../utils/notificationService.js";
+import { storeUploadedFile } from "../utils/mediaStorage.js";
 import { serializePost, serializeUser } from "../utils/serializers.js";
 
 function escapeRegex(value) {
@@ -123,7 +124,7 @@ export async function updateProfile(req, res) {
       return res.status(400).json({ message: "Profile pictures must be image files." });
     }
 
-    req.user.avatar = `${req.protocol}://${req.get("host")}/uploads/${avatarFile.filename}`;
+    req.user.avatar = await storeUploadedFile(avatarFile, req);
   } else if (nextAvatar) {
     req.user.avatar = nextAvatar;
   } else if (!req.user.avatar || req.user.avatar.includes("i.pravatar.cc/200?u=")) {

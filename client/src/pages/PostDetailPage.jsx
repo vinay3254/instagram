@@ -14,7 +14,7 @@ export default function PostDetailPage() {
   const { postId } = useParams();
   const outletContext = useOutletContext() || {};
   const { isAuthenticated } = useAuth();
-  const [localSavedPostIds, setLocalSavedPostIds] = useLocalStorage("instagram-saved-posts", []);
+  const [localSavedPostIds, setLocalSavedPostIds] = useLocalStorage("curated-saved-posts", []);
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
